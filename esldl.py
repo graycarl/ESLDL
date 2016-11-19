@@ -50,7 +50,7 @@ class Syncer(object):
         os.rename(temp, local)
 
     def _download_item(self, f, name, url):
-        self._log('Start to download [{}] from [{}]', name, url)
+        self._log('Start to download [{}]', name, url)
         resp = requests.get(url, stream=True)
         total_length = resp.headers.get('content-length')
         if total_length is None:

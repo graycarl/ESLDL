@@ -3,7 +3,7 @@ from setuptools import setup
 
 
 setup(
-    name='ESLDL',
+    name='ESLGet',
     version='0.1',
     py_modules=['esldl'],
     install_requires=[
@@ -13,6 +13,6 @@ setup(
     ],
     entry_points="""
         [console_scripts]
-        esldl=esldl:cli
+        esl-get=esldl:cli
     """
 )
