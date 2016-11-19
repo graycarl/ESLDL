@@ -20,7 +20,7 @@ ESLPod 在 iOS 的播客里面总是下载不了，于是做了这个工具用�
 esldl 会自动找到本地没有的新音频并下载下来：
 
 ```
-# esldl --path ~/SomePlace/here
+# esl-get --path ~/SomePlace/here
 Html load ok.
 9 items found.
 [ESL Podcast 1261 – Reading About Research on Health.mp3] is already exists, ignore.
