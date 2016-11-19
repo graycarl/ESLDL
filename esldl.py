@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+import sys
 import click
 import requests
 from bs4 import BeautifulSoup
@@ -13,7 +14,9 @@ class Syncer(object):
         self.path = path
 
     def _log(self, fmt, *args, **kwargs):
-        click.echo(unicode(fmt).format(*args, **kwargs))
+        if sys.version_info[0] == 2:
+            fmt = unicode(fmt)
+        click.echo(fmt.format(*args, **kwargs))
 
     def __call__(self):
         for name, url in self.crawl():
